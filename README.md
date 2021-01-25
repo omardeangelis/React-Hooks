@@ -1,21 +1,21 @@
 # Come usare questa Repo
 
-1 Scaricare lo Zip oppure Clonare la Repo.
-2 Entrare all'interno del progetto dal terminale cd/nome-progetto
-3 lanciare il comando npm install
+1 Scaricare lo Zip oppure Clonare la Repo.\
+2 Entrare all'interno del progetto dal terminale cd/nome-progetto\
+3 lanciare il comando npm install\
 4 entrare nella lezione da seguire dove troverete 2 cartelle: inizio e risultato.\
-Inizio contiene un file .js con già gli import basilari necessari
-Riusltato il risultato della lezione che stai seguendo
-(troverai anche un file .css già precompilato)
-5 lanciare npm run start
+Inizio contiene un file .js con già gli import basilari necessari\
+Riusltato il risultato della lezione che stai seguendo\
+(troverai anche un file .css già precompilato)\
+5 lanciare npm run start\
 
 ## Perchè questa impostazione
 
-Questo è un corso di React, non di css, nè di bootstrap tantomeno di HTML o javascript
+Questo è un corso di React, non di css, nè di bootstrap tantomeno di HTML o javascript\
 Seguire l'impostazione di Cartelle, CSS, styling generale porterebbe via troppo tempo\
-che non potremmo più dedicare all'apprendimento di React.js.
+che non potremmo più dedicare all'apprendimento di React.js.\
 
-Cercherò di spiegare il più possibile funzioni e metodi in Vanilla Javascript (javascript puro).
+Cercherò di spiegare il più possibile funzioni e metodi in Vanilla Javascript (javascript puro).\
 
 # Getting Started with Create React App
 
