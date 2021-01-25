@@ -1,4 +1,4 @@
-#Come usare questa Repo
+# Come usare questa Repo
 
 1 Scaricare lo Zip oppure Clonare la Repo.
 2 Entrare all'interno del progetto dal terminale cd/nome-progetto
@@ -9,7 +9,7 @@ Riusltato il risultato della lezione che stai seguendo
 (troverai anche un file .css già precompilato)
 5 lanciare npm run start
 
-##Perchè questa impostazione
+## Perchè questa impostazione
 
 Questo è un corso di React, non di css, nè di bootstrap tantomeno di HTML o javascript
 Seguire l'impostazione di Cartelle, CSS, styling generale porterebbe via troppo tempo\
