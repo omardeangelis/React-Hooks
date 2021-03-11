@@ -1,4 +1,4 @@
-import Inizio from "./lezioni/11-React-Router/risultato/screen";
+import Inizio from "./lezioni/9-custom-hooks/inizio/fetch-custom";
 
 function App() {
   return (
