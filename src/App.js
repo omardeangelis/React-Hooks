@@ -1,4 +1,4 @@
-import Inizio from "./lezioni/10-prop-types/risultato/prop-types";
+import Inizio from "./lezioni/11-React-Router/risultato/screen";
 
 function App() {
   return (
