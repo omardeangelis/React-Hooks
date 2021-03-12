@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { datiIncompleti } from "../../../data";
+const defaultImage =
+  "https://dl.airtable.com/.attachments/5b3ad76dfd6ca5e31810cb99141c7ede/69829b2f/pexels-dominika-roseclay-1139785.jpg";
 
 const PropComponent = () => {
   return (
@@ -13,18 +15,11 @@ const PropComponent = () => {
 };
 
 const Prodotto = ({ nome, image, prezzo }) => {
-  const url = image && image.url;
+  const img = image && image.url;
   return (
     <article className="card my-3 p-2 shadow">
       <div className="card-body">
-        <img
-          className="card-img-top"
-          src={
-            url ||
-            "https://dl.airtable.com/.attachments/5b3ad76dfd6ca5e31810cb99141c7ede/69829b2f/pexels-dominika-roseclay-1139785.jpg"
-          }
-          alt={nome}
-        />
+        <img className="card-img-top" src={img || defaultImage} alt={nome} />
         <div className="card-text">
           <h4 className="card-title">{nome}</h4>
           <p className="card-subtitle">€ {prezzo}€</p>
