@@ -1,3 +1,11 @@
+/**
+ * @typedef Person
+ * @type {Object}
+ * @property {string} id - an ID.
+ * @property {string} name - nome
+ */
+
+/** @type {[Person]}*/
 export const data = [
   { id: 1, name: "omar" },
   { id: 2, name: "tazio" },
@@ -5,6 +13,16 @@ export const data = [
   { id: 4, name: "anna" },
 ];
 
+/**
+ * @typedef Mobile
+ * @type {Object}
+ * @property {string} id - an ID.
+ * @property {object} image - nome
+ * @property {string} name - nome
+ * @property {number} prezzo - prezzo
+ */
+
+/** @type {[Mobile]} */
 export const datiIncompleti = [
   {
     id: "attcvDDMikF6G2iNi",

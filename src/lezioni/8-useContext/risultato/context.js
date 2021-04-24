@@ -4,23 +4,33 @@ import { data } from "../../../data";
 const AppContext = React.createContext();
 
 const MainComponent = () => {
+  /**
+   * @type {[[Object], Function]} People
+   */
   const [people, setPeople] = useState(data);
+
+  /**
+   *
+   * @param {Number} id
+   * @returns {undefined}
+   */
   const removePeople = (id) => setPeople(people.filter((el) => el.id !== id));
   return (
     <AppContext.Provider value={{ people, removePeople }}>
       <div>
         <h3> Use Context Component </h3>
-        <Elenco people={people} removePeople={removePeople} />
+        <Elenco />
       </div>
     </AppContext.Provider>
   );
 };
 
 const Elenco = () => {
-  const { people } = useContext(AppContext);
+  const info = useContext(AppContext);
+  console.log(info);
   return (
     <div>
-      {people.map((el, index) => {
+      {info.people.map((el, index) => {
         return <Persona key={index} {...el} />;
       })}
     </div>

@@ -15,14 +15,22 @@ const PropComponent = () => {
 };
 
 const Prodotto = ({ nome, image, prezzo }) => {
+  /**
+   * @type {String || undefined}
+   */
   const img = image && image.url;
+
   return (
-    <article className="card my-3 p-2 shadow">
+    <article className="card shadow my-3 p-2">
       <div className="card-body">
-        <img className="card-img-top" src={img || defaultImage} alt={nome} />
+        <img
+          src={img || defaultImage}
+          alt={nome || "divano default"}
+          className="card-img-top"
+        />
         <div className="card-text">
-          <h4 className="card-title">{nome}</h4>
-          <p className="card-subtitle">€ {prezzo}€</p>
+          <h4 className="card-title">{nome || "divano default"}</h4>
+          <p className="card-subtitle">€ {prezzo || 7.99}</p>
         </div>
       </div>
     </article>

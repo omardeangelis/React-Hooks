@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import useFetch from "../../9-custom-hooks/risultato/useFetch";
 const url = "https://api.github.com/users";
+
+/**
+ * Trova il Valore Maggiore
+ * @param {[Object]} array
+ * @returns {Number}
+ */
 const trovaMaggiore = (array) => {
+  console.log("trovo maggiore");
   return array.reduce((total, item) => {
     if (item.id > total) {
       total = item.id;
@@ -11,14 +18,17 @@ const trovaMaggiore = (array) => {
 };
 const Index = () => {
   const { data } = useFetch(url);
-  const [contatore, setContatore] = React.useState(0);
-  const [bannati, setBannati] = React.useState(0);
+  /**
+   * @type {[Number, Function]}
+   */
+  const [contatore, setContatore] = useState(0);
 
-  const addBannati = React.useCallback(() => {
-    setBannati(bannati + 1);
-  }, [bannati]);
-
-  React.useMemo(() => trovaMaggiore(data), [data]);
+  /**
+   * Tiene Traccia del valore returnato da trovaMaggiore
+   * Fino a quando data non Varia, restituisce sempre quel valore
+   * invece di eseguire nuovamente la funzione
+   */
+  useMemo(() => trovaMaggiore(data), [data]);
   return (
     <>
       <div style={{ width: "fit-content", margin: "auto" }}>
@@ -32,15 +42,18 @@ const Index = () => {
       </div>
       <div style={{ width: "fit-content", margin: "auto" }}>
         {data.map((el) => {
-          return <Elenco key={el.id} {...el} addBannati={addBannati} />;
+          return <Elenco key={el.id} {...el} />;
         })}
       </div>
     </>
   );
 };
 
-const Elenco = React.memo(({ avatar_url: image, login: name, addBannati }) => {
-  console.log("item");
+/**
+ * Il Componente è inserito all'interno di Memo, che controlla i valori all'interno del props
+ * Se essi non variano il componente viene memorizzato e non subisce un nuovo Render
+ */
+const Elenco = React.memo(({ avatar_url: image, login: name }) => {
   return (
     <article className="card bg-white my-3 shadow-sm">
       <img
@@ -50,9 +63,6 @@ const Elenco = React.memo(({ avatar_url: image, login: name, addBannati }) => {
         style={{ width: "30%", borderRadius: "50%", margin: "auto" }}
       />
       <h4>{name}</h4>
-      <button className="btn btn-danger" onClick={addBannati}>
-        Banna
-      </button>
     </article>
   );
 });

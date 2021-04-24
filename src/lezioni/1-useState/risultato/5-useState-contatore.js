@@ -1,19 +1,33 @@
 import React, { useState } from "react";
 
 const CounterComponent = () => {
+  /**
+   * @type {[Number, Funtion]} contatore
+   */
   const [contatore, setContatore] = useState(0);
 
+  /**
+   * Funzione per azzerrare il contatore
+   * @return {undefined}
+   */
   const reset = () => {
     setContatore(0);
   };
 
+  /**
+   * Funzione per diminuire il valore del contatore
+   * @return {undefined}
+   */
   const dimContatore = () => {
     setContatore(contatore - 1);
   };
 
+  /**
+   * Funzione per aumentare il contatore dopo 2000 millisecondi
+   * @return {undefined}
+   */
   const aumentaContatoreTemporale = () => {
     setTimeout(function () {
-      //setContatore(contatore + 1);
       setContatore((oldValue) => {
         return oldValue + 1;
       });

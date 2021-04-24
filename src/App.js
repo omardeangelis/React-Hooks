@@ -1,4 +1,4 @@
-import Inizio from "./lezioni/12-memo-useMemo/inizio";
+import Inizio from "./lezioni/13-useCallBack/risultato/index";
 
 function App() {
   return (

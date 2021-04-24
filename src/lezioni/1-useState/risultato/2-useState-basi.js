@@ -1,15 +1,22 @@
 import React, { useState } from "react";
-// starts with use
-// component must be uppercase
-// invoke inside function/component body
-// don't call hooks conditonally
+//Gli Hook Devono Iniziare con use
+//Il componente in cui lo usiamo deve avere la prima lettera maiuscola on iniziare con use
+//Hooks devo essere chiamati all'interno del corpo del componente
+//Hooks non possono essere chiamati in maniera condizionale
 
 const UsoBase = () => {
+  /**
+   * @type {[String, Function]} titolo
+   */
   const [titolo, setTitolo] = useState("Hello World!!");
   //   const value = useState()[0];
   //   const handler = useState()[1];
   //   console.log(value, handler);
 
+  /**
+   * Funzione che modifica il titolo al click
+   * @returns {undefined}
+   */
   const cambiaTitolo = () => {
     if (titolo === "Hello World!!") {
       setTitolo("React Magic!");

@@ -1,8 +1,14 @@
 import React from "react";
 
 const ErroreBase = () => {
+  /**
+   * @type {String} titolo
+   */
   let titolo = "Hello world!";
-
+  /**
+   * Modifica il contenuto di titolo
+   * @returns {undefined}
+   */
   const cambiaTitolo = () => {
     titolo = "nuovo titolo";
     console.log(titolo);

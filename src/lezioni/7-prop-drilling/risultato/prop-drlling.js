@@ -2,8 +2,16 @@ import React, { useState } from "react";
 import { data } from "../../../data";
 
 const MainComponent = () => {
+  /**
+   * @type {[[Object], Function]} array contente tutte le persone
+   */
   const [people, setPeople] = useState(data);
 
+  /**
+   * Rimuove Elementi dallo state e lo aggiorna
+   * @param {Number} id
+   * @returns {undefined}
+   */
   const removePeople = (id) => setPeople(people.filter((el) => el.id !== id));
   return (
     <div>

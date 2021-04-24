@@ -24,7 +24,7 @@ const SingleProgetto = ({ history, match, location }) => {
     if (Number(id) === 1 || Number(id) === 2) {
       history.push("/progetto/3");
     } else {
-      routerHistory.push("/progetto/2");
+      routerHistory.push("/progetto/1");
     }
   };
   return (

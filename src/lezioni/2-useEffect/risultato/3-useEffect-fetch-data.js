@@ -3,12 +3,22 @@ import axios from "axios";
 const url = "https://api.github.com/users";
 
 const FetchComponent = () => {
+  /**
+   * @type {[[Object], Function]} Lista di User
+   */
   const [users, setUsers] = useState([]);
 
+  /**
+   * Fetcha i fati utilizzando la libreria axios
+   * Inserisce i valori all'interno dello state
+   * @returns {undefined}
+   */
   const getData = async () => {
     const response = await axios.get(url);
     setUsers(response.data);
   };
+
+  //Fetcha i dati solo al primo render
   useEffect(() => {
     getData();
   }, []);

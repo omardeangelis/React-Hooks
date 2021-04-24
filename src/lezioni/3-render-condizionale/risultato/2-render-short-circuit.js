@@ -2,7 +2,14 @@ import React, { useState } from "react";
 //Javascript Short Circuit evaluation
 //Operatore Ternario
 const ShortRender = () => {
+  /**
+   * @type {[String, Function]} State della parola
+   */
   const [parola, setParola] = useState("Sono una Parola");
+
+  /**
+   * @type {[Boolean, Function]} Toggle State
+   */
   const [toggle, setToggle] = useState(false);
   //const esempio = parola || "sono un esempio";
   return (

@@ -1,1 +1,2 @@
-export const OPEN_CLOSE_MODAL = "OPEN_CLOSE_MODAL";
+export const APRI_MODAL = "APRI_MODAL";
+export const CHIUDI_MODAL = "SXDFCGVHJBKNL";

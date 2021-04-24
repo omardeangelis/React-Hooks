@@ -4,40 +4,66 @@ import axios from "axios";
 const url = "https://api.github.com/users/QuincyLarson";
 
 const ConditionalCompining = () => {
+  /**
+   * @type {[Boolean, Function]} Loading State
+   */
   const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState("utente standard");
+  /**
+   * @type {[Boolean, Function]} Error State
+   */
   const [isError, setIsError] = useState(false);
+  /**
+   * @type {[Object, Function]} user Selezionato
+   */
+  const [user, setUser] = useState();
 
-  const getDate = async () => {
+  /**
+   * Fetcha Dati e modifica lo state user
+   *
+   * @async
+   * @function getData
+   * @returns {undefined}
+   */
+  const getData = async () => {
+    setIsError(false);
     setIsLoading(true);
-    const response = await axios.get(url);
-    if (response.status === 200) {
-      setData(response.data);
-      setIsError(false);
-    } else {
+    try {
+      const response = await axios.get(url);
+      setUser(response.data);
+    } catch (error) {
+      console.log(error);
       setIsError(true);
     }
     setIsLoading(false);
   };
 
+  /**
+   * Al Primo Render del componente lancia la funzione getData
+   */
   useEffect(() => {
-    getDate();
+    getData();
   }, []);
+
+  //Se Lo State di isLoading è true ritorna il caricamento
   if (isLoading) {
     return <Loading />;
   }
+
+  //Se si verifica un errore Ritorna Error Component
   if (isError) {
     return <ErrorComponent />;
   }
+
+  //Se nessuna delle condizioni precednete è soddisfatta tutto è andato a buon fine
   return (
     <article className="card d-flex align-items-center p-5 shadow mt-5">
       <img
-        src={data.avatar_url}
-        alt={data.login}
+        src={user.avatar_url}
+        alt={user.name}
         style={{ width: "80px", height: "80px" }}
-        className="rounded-circle my-4"
-      />
-      <h3> {data.login}</h3>
+        className="rounded-circle my-4 shadow"
+      ></img>
+      <h3>{user.login}</h3>
     </article>
   );
 };

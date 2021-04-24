@@ -1,6 +1,12 @@
 import React, { useState, useMemo, useCallback } from "react";
 import useFetch from "../../9-custom-hooks/risultato/useFetch";
 const url = "https://api.github.com/users";
+
+/**
+ * Trova il Valore Maggiore
+ * @param {[Object]} array
+ * @returns {Number}
+ */
 const trovaMaggiore = (array) => {
   return array.reduce((total, item) => {
     if (item.id > total) {
@@ -11,9 +17,22 @@ const trovaMaggiore = (array) => {
 };
 const Index = () => {
   const { data } = useFetch(url);
+
+  /**
+   * @type {[Number, Function]} Contatore
+   */
   const [contatore, setContatore] = useState(0);
+
+  /**
+   * @type {[Number, Function]} Numero Utenti
+   */
   const [bannati, setBannati] = useState(0);
 
+  /**
+   * useCallback ritorna una versione memorizzata della callback che viene
+   * alterata solo quando uno dei valori all'interno delle dependencies varia
+   *
+   */
   const addBannati = useCallback(() => {
     setBannati(bannati + 1);
   }, [bannati]);
