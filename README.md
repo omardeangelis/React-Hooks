@@ -25,7 +25,7 @@ Cercherò di spiegare il più possibile funzioni e metodi in Vanilla Javascript 
 ## Progetti Rispetto all'avanzamento del corso
 
 0. Link all Repo dei progetti: https://github.com/OmarDeAngelis/react-tutorial-base
-   Link per visionare i progetti: https://hpv4learning.netlify.app/
+   Link per visionare i progetti: https://hpv4learning1.netlify.app/
 
 #### Dopo aver concluso la sezione riguardo useState Hook
 
