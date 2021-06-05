@@ -1,18 +1,18 @@
 # Come usare questa Repo
 
-1. Scaricare lo Zip oppure Clonare la Repo.\
+1. Scaricare lo Zip oppure Clonare la Repo.
 
-2. Entrare all'interno del progetto dal terminale cd/nome-progetto\
+2. Entrare all'interno del progetto dal terminale cd/nome-progetto
 
-3. lanciare il comando npm install\
+3. lanciare il comando npm install
 
-4. entrare nella lezione da seguire dove troverete 2 cartelle: inizio e risultato.\
+4. entrare nella lezione da seguire dove troverete 2 cartelle: inizio e risultato.
 
-Inizio contiene uno o più file .js con già gli import basilari necessari\
-Riusltato il risultato della lezione che stai seguendo\
-(troverai anche un file .css già precompilato)\
+Inizio contiene uno o più file .js con già gli import basilari necessari
+Riusltato il risultato della lezione che stai seguendo
+(troverai anche un file .css già precompilato)
 
-5. lanciare npm run start\
+5. lanciare npm run start
 
 ## Perchè questa impostazione
 
@@ -25,7 +25,7 @@ Cercherò di spiegare il più possibile funzioni e metodi in Vanilla Javascript 
 ## Progetti Rispetto all'avanzamento del corso
 
 0. Link all Repo dei progetti: https://github.com/OmarDeAngelis/react-tutorial-base
-   Link per visionare i progetti: https://hpv4learning1.netlify.app/
+   Link per visionare i progetti: https://hpv4learning.it/corso-react-hook-teoria-progetti/?scrollTo=projects
 
 #### Dopo aver concluso la sezione riguardo useState Hook
 
