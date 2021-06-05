@@ -8,7 +8,7 @@
 
 4. entrare nella lezione da seguire dove troverete 2 cartelle: inizio e risultato.
 
-Inizio contiene uno o più file .js con già gli import basilari necessari
+Inizio contiene uno o più file .js con già gli import basilari necessari \
 Riusltato il risultato della lezione che stai seguendo
 (troverai anche un file .css già precompilato)
 
