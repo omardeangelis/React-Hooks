@@ -25,7 +25,7 @@ const CleanUp = () => {
   });
   return (
     <div
-      className="container w-75 col-6 offset-3 bg-white shadow p-4"
+      className='container w-75 col-6 offset-3 bg-white shadow p-4 mx-auto'
       style={{ textAlign: "center" }}
     >
       <h1> {size} </h1>
