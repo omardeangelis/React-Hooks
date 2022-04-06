@@ -4,6 +4,7 @@ import About from "./screen/About";
 import ErrorPage from "./screen/ErrorPage";
 import Home from "./screen/Home";
 import Profile from "./screen/Profile";
+import SingleProfile from "./screen/SingleProfile";
 // Non si importa più switch
 
 const Component = () => {
@@ -19,6 +20,8 @@ const Component = () => {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/profile' element={<Profile />} />
+        {/* Fare prova con name */}
+        <Route path='/profile/:id' element={<SingleProfile />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
     </Router>
