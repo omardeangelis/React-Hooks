@@ -1,4 +1,4 @@
-import Inizio from "./lezioni/4-forms/inizio/2-input-object-state";
+import Inizio from "./lezioni/11-React-Router/v6/risultato";
 
 function App() {
   return (
