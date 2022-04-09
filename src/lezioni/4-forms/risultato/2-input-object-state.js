@@ -58,47 +58,51 @@ const ControlledInput = () => {
     log(persone);
   }, [persone]);
   return (
-    <form className="bg-white shadow rounded p-4">
-      <div className="form-group d-flex align-items-center justify-content-around container">
-        <label htmlFor="nome" className="text-left font-weight-bold col-3">
+    <form className='bg-white shadow rounded p-4'>
+      <div className='form-group d-flex align-items-center container mt-2'>
+        <label htmlFor='nome' className='text-left font-weight-bold col-2'>
           Nome:
         </label>
         <input
-          id="nome"
-          type="text"
-          name="nome"
+          id='nome'
+          type='text'
+          name='nome'
           value={persona.nome}
           onChange={handleChange}
-          className="form-control col-9"
+          className='form-control'
         ></input>
       </div>
-      <div className="form-group d-flex align-items-center justify-content-around container">
-        <label htmlFor="email" className="text-left font-weight-bold col-3">
+      <div className='form-group d-flex align-items-center container mt-2'>
+        <label htmlFor='email' className='text-left font-weight-bold col-2'>
           Email:
         </label>
         <input
-          id="email"
-          type="email"
-          name="email"
+          id='email'
+          type='email'
+          name='email'
           value={persona.email}
           onChange={handleChange}
-          className="form-control col-9"
+          className='form-control'
         ></input>
       </div>
-      <div className="form-group d-flex align-items-center justify-content-around container">
-        <label htmlFor="cellulare" className="text-left font-weight-bold col-3">
+      <div className='form-group d-flex align-items-center container mt-2'>
+        <label htmlFor='cellulare' className='text-left font-weight-bold col-2'>
           Cellulare:
         </label>
         <input
-          id="cellulare"
-          type="tel"
-          name="cellulare"
+          id='cellulare'
+          type='tel'
+          name='cellulare'
           value={persona.cellulare}
           onChange={handleChange}
-          className="form-control col-9"
+          className='form-control'
         ></input>
       </div>
-      <button type="submit" className="btn btn-info" onClick={handleSumbit}>
+      <button
+        type='submit'
+        className='btn btn-info mt-4'
+        onClick={handleSumbit}
+      >
         Invia
       </button>
     </form>
