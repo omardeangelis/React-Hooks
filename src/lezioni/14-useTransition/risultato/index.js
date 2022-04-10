@@ -9,9 +9,9 @@ const Component = () => {
 
   const handleChange = (e) => {
     const { value } = e.target;
-    startTransition(() => {
-      setInputValue(value);
-    });
+    // startTransition(() => {
+    // });
+    setInputValue(value);
   };
 
   React.useEffect(() => {

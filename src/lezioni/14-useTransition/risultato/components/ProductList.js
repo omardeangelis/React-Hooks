@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useDeferredValue } from "react";
 const ProductList = ({ products }) => {
+  const deferredProducts = useDeferredValue(products);
   return (
     <div className='mx-auto mt-4'>
-      {products.map((product, index) => {
+      {deferredProducts.map((product, index) => {
         return (
           <div
             key={index}
