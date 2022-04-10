@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useTransition } from "react";
 import ProductList from "./components/ProductList";
 import { data } from "./assets/data";
 
 const Component = () => {
-  const [inputValue, setInputValue] = React.useState(data);
+  const [isPending, startTransition] = useTransition();
+  const [inputValue, setInputValue] = React.useState("");
   const [filteredProducts, setFilteredProducts] = React.useState(data);
 
   const handleChange = (e) => {
     const { value } = e.target;
-    setInputValue(value);
+    startTransition(() => {
+      setInputValue(value);
+    });
   };
 
   React.useEffect(() => {
@@ -26,7 +29,11 @@ const Component = () => {
           onChange={handleChange}
         />
       </div>
-      <ProductList products={filteredProducts} />
+      {isPending ? (
+        <h4 color='blue'>Loading List</h4>
+      ) : (
+        <ProductList products={filteredProducts} />
+      )}
     </div>
   );
 };

@@ -3,7 +3,7 @@ import ProductList from "./components/ProductList";
 import { data } from "./assets/data";
 
 const Component = () => {
-  const [inputValue, setInputValue] = React.useState(data);
+  const [inputValue, setInputValue] = React.useState("");
   const [filteredProducts, setFilteredProducts] = React.useState(data);
 
   const handleChange = (e) => {
