@@ -1,4 +1,4 @@
-import Inizio from "./lezioni/14-useTransition/risultato";
+import Inizio from "./lezioni/15-useId/risultato";
 
 function App() {
   return (
