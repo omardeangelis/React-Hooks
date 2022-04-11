@@ -15,14 +15,7 @@ const Component = () => {
         }
       >
         <Photos />
-      </Suspense>
-      <Suspense
-        fallback={
-          <div className='mt-5'>
-            <Spinner />
-          </div>
-        }
-      >
+
         <Comments />
       </Suspense>
     </div>
