@@ -13,7 +13,7 @@ const Comments = () => {
     <div className='container mt-4'>
       <ul className='list-group-flush'>
         {comments &&
-          comments.map((comment) => {
+          comments.slice(0, 5).map((comment) => {
             return (
               <li key={comments.id} className='list-group-item'>
                 {comment.email}
