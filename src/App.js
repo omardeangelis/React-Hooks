@@ -1,4 +1,4 @@
-import Inizio from "./lezioni/1-useState/inizio/1-errore-base";
+import Inizio from "./lezioni/16-suspense/risultato";
 
 function App() {
   return (
