@@ -4,6 +4,18 @@
 
 2. Entrare all'interno del progetto dal terminale cd/nome-progetto
 
+2.5 ( opzionale ) - Come utilizzare versione node consigliata da progetto:
+- installare `nvm` [link documentazione](https://github.com/nvm-sh/nvm#installing-and-updating) 
+(Windows):
+- usare il comando nel terminale `type .\.nvmrc | %{$_ -replace "v",""} | %{nvm install $_}`
+- usare il comando `type .\.nvmrc | %{$_ -replace "v",""} | %{nvm use $_}`
+
+(Mac / Linux)
+- Usare il comando `nvm install`
+- Usare il comando `nvm use` 
+
+Per approfondimenti su `nvm` e altri utilizzi fare riferimento alla [documentazione ufficiale](installare `nvm` [link documentazione](https://github.com/nvm-sh/nvm#installing-and-updating) che è super dettagliata ed aggiornanta
+
 3. lanciare il comando npm install
 
 4. entrare nella lezione da seguire dove troverete 2 cartelle: inizio e risultato.
