@@ -1,9 +1,9 @@
-import Inizio from "./lezioni/16-suspense/risultato";
+import Inizio from "./lezioni/5-useRef/risultato/useref-example";
 
 function App() {
   return (
-    <div className='App'>
-      <section className='container text-center my-3'>
+    <div className="App">
+      <section className="container text-center my-3">
         <Inizio />
       </section>
     </div>
