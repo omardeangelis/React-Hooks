@@ -1,57 +1,43 @@
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 
 const RefExample = () => {
-  /**
-   * @type {[Number, Function]} Posizione
-   */
-  const [posizione, setPosizione] = useState(0);
+  const ref = React.useRef(null);
+  console.log(ref);
 
-  /**
-   * @type {Object}
-   */
-  const titolo = useRef(null);
+  const handleScroll = () => {
+    if (!ref || !ref.current) {
+      return;
+    }
 
-  /**
-   * @type {Object}
-   */
-  const inputRef = useRef(null);
-
-  /**
-   *  Gestisce il submit del form
-   * @param {Event} e
-   * @listens document#submit
-   */
-  const handleSumbit = (e) => {
-    e.preventDefault();
-    console.log(inputRef.current.value);
+    ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
   };
-
-  //Modifica la posizione al modificare la costante Titolo
-  useEffect(() => {
-    setPosizione(titolo.current.getBoundingClientRect());
-  }, [titolo]);
   return (
-    <div>
-      <h2 ref={titolo} className="ml-1 mt-5">
-        {" "}
-        Titolo Titolo
-      </h2>
-      <h4
+    <>
+      <h1>Use Ref</h1>
+      <div
+        className="my-5 mx-auto"
         style={{
-          position: "absolute",
-          left: posizione.left,
-          top: `${posizione.top + 400}px`,
+          height: "100vh",
         }}
       >
-        Posizione
-      </h4>
-      <form onSubmit={handleSumbit}>
-        <input type="text" ref={inputRef} />
-        <button className="button" type="submit">
-          Invia
+        <button className="btn btn-info" onClick={handleScroll}>
+          Scroll
         </button>
-      </form>
-    </div>
+      </div>
+
+      <div
+        style={{
+          height: "100vh",
+        }}
+      ></div>
+
+      <h2 ref={ref}>Testo Testo</h2>
+      <div
+        style={{
+          height: "30vh",
+        }}
+      ></div>
+    </>
   );
 };
 
