@@ -1,6 +1,6 @@
 import React from "react";
 
-const Component = () => {
+const RefExample = () => {
   const ref = React.useRef(null);
   console.log(ref);
 
@@ -41,4 +41,4 @@ const Component = () => {
   );
 };
 
-export default Component;
+export default RefExample;
